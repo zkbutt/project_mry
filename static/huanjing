@@ -1,0 +1,24 @@
+npm config set registry https://registry.npm.taobao.org
+npm i yarn -g --verbose
+
+yarn config set registry https://registry.npm.taobao.org
+npm install  =>
+npm install --save [package] => yarn add [package]
+npm install --save-dev [package] => yarn add [package] --dev
+npm install --global [package] => yarn global add [package]
+npm uninstall --save [package] => yarn remove [package]
+npm uninstall --save-dev [package] => yarn remove [package]
+yarn remove mockjs
+
+
+--------安装yarn-----------
+yarn add axios
+加入请求头：http://127.0.0.1:8000/api-token-auth/
+'Authorization':'Token 9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b'
+
+
+--------编译错误-----------
+rm -rf node_modules
+rm -rf package-lock.json
+npm cache clear --force
+npm install
