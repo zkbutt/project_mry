@@ -9,7 +9,8 @@ npm install --global [package] => yarn global add [package]
 npm uninstall --save [package] => yarn remove [package]
 npm uninstall --save-dev [package] => yarn remove [package]
 yarn remove mockjs
-
+yarn add vuex
+npm install vuex --save
 
 --------安装yarn-----------
 yarn add axios

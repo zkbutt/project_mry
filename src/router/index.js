@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from '@/views/Login'
 import Home from '@/views/Home'
 import E404NotFound from '@/views/error/E404NotFound'
+import T1 from '@/components/T1'
 
 Vue.use(Router)
 
@@ -31,8 +32,13 @@ export default new Router({
     },
     {
       path: '/404',
-      name: 'notFound',
+      name: '页面没找到',
       component: E404NotFound
+    },
+    {
+      path: '/t1',
+      name: '测试',
+      component: T1
     }
   ]
 })

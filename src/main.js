@@ -9,14 +9,24 @@ import '@/styles/index.scss'
 import 'font-awesome/scss/font-awesome.scss'
 import api from './http/index'
 import config from '@/http/config'
+import store from '@/store'
 
 Vue.use(ElementUI)
 Vue.use(api)
 
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  components: { App },
+  template: '<App/>'
+})
+
 router.beforeEach((to, from, next) => {
-  /*
+  /* 路由守卫
 sessionStorage.setItem('user', username)  // 保存会话
 sessionStorage.removeItem('user', username)// 删除会话
 sessionStorage.clear()
@@ -39,10 +49,9 @@ next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果�
   }
 })
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
+// main中实例化store
+// var store = new vuex.Store({// store对象
+//   state: {
+//     xian: false
+//   }
+// })
